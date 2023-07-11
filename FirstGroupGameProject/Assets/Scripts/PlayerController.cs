@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
             canGrab = true;
         }
     }
-    private void OnTriggerExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Interactable"))
         {

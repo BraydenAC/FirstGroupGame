@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     private Transform player;             // Reference to the player's transform
     private Vector3 patrolDestination;    // Destination for patrolling
-    private bool isChasing = false;       // Flag for if enemy is chasing the player
+    //private bool isChasing = false;       // Flag for if enemy is chasing the player
 
     private enum EnemyState
     {
