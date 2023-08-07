@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+#nullable enable
+
 public class Enemy : MonoBehaviour
 {
     public float sightRadius = 10f;       // Sight radius of the enemy
@@ -79,7 +81,7 @@ public class Enemy : MonoBehaviour
 
     private void Patrol()
     {
-        Debug.Log("Patrol");
+        // Debug.Log("Patrol");
 
         // Move towards the patrol destination
         transform.position += (patrolDestination - transform.position).normalized * moveSpeed * Time.deltaTime;
@@ -93,7 +95,7 @@ public class Enemy : MonoBehaviour
 
     private void Chase()
     {
-        Debug.Log("Chase!");
+        // Debug.Log("Chase!");
 
         // Calculate the movement direction towards the player's position
         Vector3 direction = (player.position - transform.position).normalized;
@@ -105,7 +107,7 @@ public class Enemy : MonoBehaviour
     private void Attack()
     {
         // Attack goes here
-        Debug.Log("Attack!");
+        // Debug.Log("Attack!");
     }
 
     private void GeneratePatrolDestination()
