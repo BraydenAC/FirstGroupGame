@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
+using Utils;
 
 #nullable enable
 
 namespace Dialogue
 {
 
-    public delegate (string textLocalizationKey, string audioLocalizationKey,
-        // TODO Leave this empty for no responses
+    public delegate (string textLocalizationTable, string textLocalizationKey, string audioLocalizationTable, string audioLocalizationKey,
         IList<ResponseChoice> responseChoices) DialogueBox();
-    public record ResponseChoice(string textLocalizationKey, DialogueBox? response) { }
+    
+    public record ResponseChoice(string textLocalizationTable, string textLocalizationKey, DialogueBox? response) { }
 
     public class DialogueManager : MonoBehaviour
     {
+
         [SerializeField]
         GameObject canvas;
 
@@ -30,10 +33,16 @@ namespace Dialogue
         public void Start()
         {
             instance = this;
+            instance.canvas.SetActive(false);
         }
 
-        public static bool IsMenuOpen = false;
-        public static IList<ResponseChoice>? CurrentResponseChoices;
+        public static bool IsMenuOpen
+        {
+            get;
+            private set;
+        } = false;
+
+        public static IList<ResponseChoice> CurrentResponseChoices = new List<ResponseChoice>();
         public static AudioSource? CurrentAudioSource;
 
         public static void OpenMenu(DialogueBox dialogue, AudioSource whereToPlayAudio)
@@ -46,37 +55,37 @@ namespace Dialogue
             }
             // Mark the menu as open
             IsMenuOpen = true;
+            instance.canvas.SetActive(true);
 
             // Run the NpcDialogue, so we can use the results
-            (string textLocalizationKey, string audioLocalizationKey, IList<ResponseChoice> responseChoices) = dialogue();
+            (string textLocalizationTable, string textLocalizationKey, string audioLocalizationTable, string audioLocalizationKey,
+            IList<ResponseChoice> responseChoices) = dialogue();
 
             // Show NPC dialogue text
             TextMeshProUGUI npcText = instance.npcDialogueText.GetComponentInChildren<TextMeshProUGUI>();
-            npcText.text = textLocalizationKey;
+            npcText.text = LocalizationSettings.StringDatabase.GetLocalizedString(textLocalizationTable, textLocalizationKey);
 
             // TODO Play NPC dialogue audio
-            // whereToPlayAudio.clip = audioLocalizationKey;
+            // whereToPlayAudio.clip = LocalizationSettings.AssetDatabase.GetLocalizedAsset<AudioClip>(audioLocalizationTable, audioLocalizationKey);
             // whereToPlayAudio.Play();
             CurrentAudioSource = whereToPlayAudio;
 
             // Make the response choice buttons
             responseChoices.Enumerate((responseIndex, responseChoice) =>
             {
-                // TODO localization
                 GameObject buttonAsObject = Instantiate(instance.responseChoiceButton, new Vector3(540, 960), Quaternion.identity, instance.canvas.transform);
 
                 Button button = buttonAsObject.GetComponent<Button>();
                 TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
-                text.text = responseChoice.textLocalizationKey;
+                text.text = LocalizationSettings.StringDatabase.GetLocalizedString(responseChoice.textLocalizationTable, responseChoice.textLocalizationKey);
                 text.richText = true;
                 text.enableWordWrapping = true;
 
                 var buttonScript = button.GetComponent<DialogueButton>();
                 buttonScript.ResponseIndex = responseIndex;
 
-                // TODO expand button to fit text
-
-                // TODO skippable dialogue, which automatically plays npc audio / user audio
+                // TODO expand button to fit text, using text.preferredHeight, or ContentSizeFitter or whatever it's called
+                // https://stackoverflow.com/questions/29166380/how-to-change-width-of-a-ui-button-by-code
             });
             CurrentResponseChoices = responseChoices;
         }
@@ -93,7 +102,7 @@ namespace Dialogue
 
             // Mark the menu as closed
             IsMenuOpen = false;
-            // TODO hide/show menu when appropriate
+            instance.canvas.SetActive(false);
         }
 
         public static void ResponseChoiceClicked(int responseIndex)
@@ -103,21 +112,11 @@ namespace Dialogue
             ResponseChoice response = CurrentResponseChoices[responseIndex];
             if (response.response != null)
             {
+                if (CurrentAudioSource == null)
+                {
+                    throw new NullReferenceException();
+                }
                 OpenMenu(response.response, CurrentAudioSource);
-            }
-        }
-    }
-
-    // TODO refactor these into utils class
-    public static class ExtensionMethods
-    {
-        public static void Enumerate<T>(this IEnumerable<T> enumerable, Action<int, T> action)
-        {
-            int i = 0;
-            foreach (T item in enumerable)
-            {
-                action(i, item);
-                i++;
             }
         }
     }

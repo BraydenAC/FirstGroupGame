@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TestNpcDialogue_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: a3e1f984ae0a89a409b43ece3043e7e4, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 120785084416
+    m_Localized: Hi! Are you enjoying this game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2052773781504
+    m_Localized: Absolutely!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159774670848
+    m_Localized: Of course not.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2230549356544
+    m_Localized: I'm glad to hear it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2686679916544
+    m_Localized: You deserve far worse than Hell, and I'm happy to give it to you.
+      I'm going to make you understand why storms are named after people.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192798191616
+    m_Localized: Not really feelin' it today.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3380518461440
+    m_Localized: Oh, okay. See you around!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

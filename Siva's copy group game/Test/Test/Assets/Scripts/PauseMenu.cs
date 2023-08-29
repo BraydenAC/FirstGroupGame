@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    // TODO This should use AudioListener.pause when the game is paused, to pause all audio
     public GameObject pauseMenuUI;
     public GameObject pauseMenuButton1;
 
