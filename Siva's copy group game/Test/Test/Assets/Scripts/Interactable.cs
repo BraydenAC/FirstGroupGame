@@ -31,7 +31,7 @@ public class Interactable : MonoBehaviour
 
             if (enemy != null)
             {
-                // Calculate damage based on the object's velocity or other criteria
+                // TODO Calculate damage based on the object's velocity or other criteria
                 int damage = 20; // You can adjust this value according to your game's balance
 
                 // Call the TakeDamage method of the enemy to apply damage
