@@ -15,8 +15,36 @@ MonoBehaviour:
   m_TableCollectionName: TestNpcText
   m_TableCollectionNameGuidString: c45ec1089cfcc084995aa8e26ab6ec8f
   m_Entries:
-  - m_Id: 85519376384
+  - m_Id: 120785084416
     m_Key: Greeting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2052773781504
+    m_Key: Player says yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159774670848
+    m_Key: Player says no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2230549356544
+    m_Key: Npc responds to yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2686679916544
+    m_Key: Npc responds to no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192798191616
+    m_Key: Player says no part 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3380518461440
+    m_Key: Npc responds to no part 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565484811689984
+    m_Key: Player leaves
     m_Metadata:
       m_Items: []
   m_Metadata:

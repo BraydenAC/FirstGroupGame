@@ -18,8 +18,37 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 85519376384
-    m_Localized: "\xA1Hola!"
+  - m_Id: 120785084416
+    m_Localized: "\xA1Hola! \xBFT\xFA disfrutas este juego?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2052773781504
+    m_Localized: Por supuesto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159774670848
+    m_Localized: Claro que no.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2230549356544
+    m_Localized: "\xA1Me alegra o\xEDrlo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2686679916544
+    m_Localized: "Te mereces algo mucho peor que el infierno, y estoy feliz de d\xE1rtelo.
+      Voy a hacerte entender por qu\xE9 las tormentas llevan nombres de personas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192798191616
+    m_Localized: No tengo ganas de hacer eso hoy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3380518461440
+    m_Localized: "Ah, vale. Me parece justo. \xA1Nos vemos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565484811689984
+    m_Localized: (I don't know how to idiomatically translate UI elements to Spanish)
     m_Metadata:
       m_Items: []
   references:

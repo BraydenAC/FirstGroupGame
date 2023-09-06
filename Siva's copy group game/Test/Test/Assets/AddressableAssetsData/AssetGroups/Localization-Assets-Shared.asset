@@ -22,6 +22,25 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd669aa6381138a41a9e1a37bcc9ae7d
+    m_Address: Assets/Localization/TestNpcAudio Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8981fde445591a94fb37c826b1bb6f23
+    m_Address: Test Npc Audio
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c565e4b5cf625c74fb1ac7c7c1c1354d
+    m_Address: Test Player Audio
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 9ee08e9890b41424fabf894eff868a5d, type: 2}
   m_SchemaSet:

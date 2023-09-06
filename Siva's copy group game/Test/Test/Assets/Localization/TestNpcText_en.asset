@@ -18,8 +18,37 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 85519376384
-    m_Localized: Hello!
+  - m_Id: 120785084416
+    m_Localized: Hi! Are you enjoying this game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2052773781504
+    m_Localized: Absolutely!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159774670848
+    m_Localized: Of course not.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2230549356544
+    m_Localized: I'm glad to hear it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2686679916544
+    m_Localized: You deserve far worse than Hell, and I'm happy to give it to you.
+      I'm going to make you understand why storms are named after people.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192798191616
+    m_Localized: Not really feelin' it today.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3380518461440
+    m_Localized: Oh, okay. See you around!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565484811689984
+    m_Localized: (Leave)
     m_Metadata:
       m_Items: []
   references:

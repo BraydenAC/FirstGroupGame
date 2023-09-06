@@ -1120,6 +1120,7 @@ GameObject:
   - component: {fileID: 873695791}
   - component: {fileID: 873695790}
   - component: {fileID: 873695792}
+  - component: {fileID: 873695793}
   m_Layer: 0
   m_Name: Dialogue UI
   m_TagString: Untagged
@@ -1172,26 +1173,104 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   test:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c45ec1089cfcc084995aa8e26ab6ec8f
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1565484811689984
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   clip:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:dd669aa6381138a41a9e1a37bcc9ae7d
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 480698310656
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
-  PLAY_AUDIO_ON_HOVER: 0
   PlayerAudioSource: {fileID: 612000480}
+  PLAY_AUDIO_ON_HOVER: 1
   references:
     version: 2
     RefIds: []
+--- !u!114 &873695793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873695789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 49db87ad26cf35c4cadab8e35f6862b0, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 873695792}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: CloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cf755e8f-5ada-4422-bdba-47bd5542e0b0
+    m_ActionName: 'Menu/Close[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 873695792}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: MoveSelectorUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5f0aeb11-ba41-4264-b214-5a35844370bf
+    m_ActionName: 'Menu/Move Selector Up[/Keyboard/upArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 873695792}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: MoveSelectorDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5906adce-0433-4136-87a2-9d8f895a1d74
+    m_ActionName: 'Menu/Move Selector Down[/Keyboard/downArrow]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Menu
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
