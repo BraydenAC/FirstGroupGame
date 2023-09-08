@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TestNpcText_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: c45ec1089cfcc084995aa8e26ab6ec8f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 120785084416
+    m_Localized: "\xA1Hola! \xBFT\xFA disfrutas este juego?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2052773781504
+    m_Localized: Por supuesto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159774670848
+    m_Localized: Claro que no.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2230549356544
+    m_Localized: "\xA1Me alegra o\xEDrlo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2686679916544
+    m_Localized: "Te mereces algo mucho peor que el infierno, y estoy feliz de d\xE1rtelo.
+      Voy a hacerte entender por qu\xE9 las tormentas llevan nombres de personas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192798191616
+    m_Localized: No tengo ganas de hacer eso hoy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3380518461440
+    m_Localized: "Ah, vale. Me parece justo. \xA1Nos vemos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565484811689984
+    m_Localized: (I don't know how to idiomatically translate UI elements to Spanish)
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
